@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Clientes - Halcón Capital</title>
+</head>
+<body bgcolor="#F0F9FF" style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
+
+    <!-- Header -->
+    <table width="100%" cellpadding="10" cellspacing="0" border="0" bgcolor="#1E3A8A">
+        <tr>
+            <td>
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td width="200">
+                            <div style="display: inline-block;">
+                                <span style="background-color: #F97316; color: white; padding: 8px 12px; border-radius: 5px; font-weight: bold; margin-right: 10px;">H</span>
+                                <span style="color: white; font-size: 18px; font-weight: bold;">Halcón Capital</span>
+                            </div>
+                        </td>
+                        <td align="center">
+                            <span style="color: white; font-size: 16px; font-weight: bold;">Portal de Clientes</span>
+                        </td>
+                        <td width="200" align="right">
+                            <span style="color: #E5E7EB; font-size: 14px;">Cliente: Ana García</span>
+                            <button 
+                                onclick="window.location.href='index.html'" 
+                                style="margin-left: 15px; padding: 5px 10px; background-color: #F97316; color: white; border: none; border-radius: 3px; cursor: pointer;">Salir</button>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Navigation Menu -->
+    <table width="100%" cellpadding="8" cellspacing="0" border="0" bgcolor="#4B5563">
+        <tr>
+            <td align="center">
+                <table cellpadding="8" cellspacing="0" border="0">
+                    <tr>
+                        <td><a href="dashboard_clientes.html" style="color: white; text-decoration: none; padding: 8px 15px; background-color: #F97316; border-radius: 3px;">Mi Cuenta</a></td>
+                        <td><a href="movimientos_clientes.html" style="color: #E5E7EB; text-decoration: none; padding: 8px 15px;">Movimientos</a></td>
+                        <td><a href="estadodecuenta_clientes.html" style="color: #E5E7EB; text-decoration: none; padding: 8px 15px;">Estado de Cuenta</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Main Content -->
+    <table width="100%" cellpadding="20" cellspacing="0" border="0">
+        <tr>
+            <td>
+                
+                <!-- Account Summary -->
+                <table width="100%" cellpadding="15" cellspacing="0" border="0" bgcolor="#FFFFFF" style="border-radius: 5px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <tr>
+                        <td>
+                            <h3 style="color: #1E3A8A; margin: 0 0 15px 0;">Resumen de Cuenta</h3>
+                            
+                            <table width="100%" cellpadding="10" cellspacing="10" border="0">
+                                <tr>
+                                    <td width="50%" bgcolor="#F0F9FF" style="border-radius: 5px; padding: 20px; text-align: center;">
+                                        <div style="font-size: 28px; font-weight: bold; color: #1E3A8A; margin-bottom: 5px;">$45,750.00</div>
+                                        <div style="color: #4B5563; font-size: 16px;">Saldo Disponible</div>
+                                    </td>
+                                    <td width="50%" style="padding-left: 20px;">
+                                        <table width="100%" cellpadding="8" cellspacing="0" border="0">
+                                            <tr>
+                                                <td style="color: #4B5563; font-size: 14px;">Cuenta Principal:</td>
+                                                <td style="color: #1E3A8A; font-weight: bold; font-size: 18px;">**** **** **** 1234</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="color: #4B5563; font-size: 14px;">Último Movimiento:</td>
+                                                <td style="color: #1E3A8A; font-weight: bold; font-size: 14px;">22/09/2025</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Content Row -->
+                <table width="100%" cellpadding="0" cellspacing="10" border="0">
+                    <tr>
+                        <!-- Left Column -->
+                        <td width="70%" valign="top">
+                            
+                            <!-- Recent Movements -->
+                            <table width="100%" cellpadding="15" cellspacing="0" border="0" bgcolor="#FFFFFF" style="border-radius: 5px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                                <tr>
+                                    <td>
+                                        <div style="margin-bottom: 15px;">
+                                            <h3 style="color: #1E3A8A; margin: 0; display: inline-block;">Mis Movimientos Recientes</h3>
+                                            <div style="float: right;">
+                                                <select style="padding: 5px; border: 1px solid #E5E7EB; border-radius: 3px; color: #4B5563;">
+                                                    <option>Último mes</option>
+                                                    <option>Últimos 3 meses</option>
+                                                    <option>Últimos 6 meses</option>
+                                                    <option>Todo el período</option>
+                                                </select>
+                                            </div>
+                                            <div style="clear: both;"></div>
+                                        </div>
+                                        
+                                        <table width="100%" cellpadding="10" cellspacing="0" border="0" style="border-collapse: collapse;">
+                                            <tr bgcolor="#E5E7EB">
+                                                <td style="font-weight: bold; color: #4B5563; border-bottom: 1px solid #D1D5DB;">Fecha</td>
+                                                <td style="font-weight: bold; color: #4B5563; border-bottom: 1px solid #D1D5DB;">Descripción</td>
+                                                <td style="font-weight: bold; color: #4B5563; border-bottom: 1px solid #D1D5DB;">Tipo</td>
+                                                <td style="font-weight: bold; color: #4B5563; border-bottom: 1px solid #D1D5DB;">Monto</td>
+                                                <td style="font-weight: bold; color: #4B5563; border-bottom: 1px solid #D1D5DB;">Saldo</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;">22/09/2025</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;">Depósito Empresarial</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;"><span style="background-color: #10B981; color: white; padding: 2px 6px; border-radius: 3px; font-size: 12px;">Abono</span></td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px; color: #10B981; font-weight: bold;">+$25,000.00</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px; color: #1E3A8A;">$45,750.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;">20/09/2025</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;">Pago a Proveedor XYZ</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;"><span style="background-color: #EF4444; color: white; padding: 2px 6px; border-radius: 3px; font-size: 12px;">Cargo</span></td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px; color: #EF4444; font-weight: bold;">-$8,500.00</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px; color: #1E3A8A;">$20,750.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;">18/09/2025</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;">Depósito Cliente ABC</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;"><span style="background-color: #10B981; color: white; padding: 2px 6px; border-radius: 3px; font-size: 12px;">Abono</span></td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px; color: #10B981; font-weight: bold;">+$15,000.00</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px; color: #1E3A8A;">$29,250.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;">15/09/2025</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;">Pago Servicios Generales</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;"><span style="background-color: #EF4444; color: white; padding: 2px 6px; border-radius: 3px; font-size: 12px;">Cargo</span></td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px; color: #EF4444; font-weight: bold;">-$3,250.00</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px; color: #1E3A8A;">$14,250.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;">12/09/2025</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;">Transferencia Recibida</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;"><span style="background-color: #10B981; color: white; padding: 2px 6px; border-radius: 3px; font-size: 12px;">Abono</span></td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px; color: #10B981; font-weight: bold;">+$12,500.00</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px; color: #1E3A8A;">$17,500.00</td>
+                                            </tr>
+                                        </table>
+                                        
+                                        <div style="margin-top: 15px; text-align: center;">
+                                            <button 
+                                                onclick="window.location.href='movimientos_clientes.html'" 
+                                                style="padding: 8px 20px; background-color: #1E3A8A; color: white; border: none; border-radius: 3px; cursor: pointer;">Ver Más Movimientos</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </td>
+
+                        <!-- Right Column -->
+                        <td width="30%" valign="top">
+                            
+                            <!-- Monthly Summary -->
+                            <table width="100%" cellpadding="15" cellspacing="0" border="0" bgcolor="#FFFFFF" style="border-radius: 5px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                                <tr>
+                                    <td>
+                                        <h3 style="color: #1E3A8A; margin: 0 0 15px 0;">Resumen del Mes</h3>
+                                        
+                                        <table width="100%" cellpadding="8" cellspacing="0" border="0">
+                                            <tr>
+                                                <td style="font-size: 14px; color: #4B5563;">Total Ingresos:</td>
+                                                <td align="right" style="font-size: 14px; color: #10B981; font-weight: bold;">+$52,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="font-size: 14px; color: #4B5563;">Total Egresos:</td>
+                                                <td align="right" style="font-size: 14px; color: #EF4444; font-weight: bold;">-$11,750</td>
+                                            </tr>
+                                            <tr style="border-top: 2px solid #E5E7EB;">
+                                                <td style="font-size: 16px; color: #1E3A8A; font-weight: bold; padding-top: 8px;">Balance:</td>
+                                                <td align="right" style="font-size: 16px; color: #1E3A8A; font-weight: bold; padding-top: 8px;">+$40,750</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        
+    </script>
+
+</body>
+</html>

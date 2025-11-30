@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Administrativo - Halcón Capital</title>
+</head>
+<body bgcolor="#F0F9FF" style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
+
+    <!-- Header -->
+    <table width="100%" cellpadding="10" cellspacing="0" border="0" bgcolor="#1E3A8A">
+        <tr>
+            <td>
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td width="200">
+                            <div style="display: inline-block;">
+                                <span style="background-color: #F97316; color: white; padding: 8px 12px; border-radius: 5px; font-weight: bold; margin-right: 10px;">H</span>
+                                <span style="color: white; font-size: 18px; font-weight: bold;">Halcón Capital</span>
+                            </div>
+                        </td>
+                        <td align="center">
+                            <span style="color: white; font-size: 16px; font-weight: bold;">Panel Administrativo</span>
+                        </td>
+                        <td width="200" align="right">
+                            <span style="color: #E5E7EB; font-size: 14px;">Administrador: Juan Pérez</span>
+                            <button
+                                onclick="window.location.href='index.html'"
+                                style="margin-left: 15px; padding: 5px 10px; background-color: #F97316; color: white; border: none; border-radius: 3px; cursor: pointer;">Salir</button>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Navigation Menu -->
+    <table width="100%" cellpadding="8" cellspacing="0" border="0" bgcolor="#4B5563">
+        <tr>
+            <td align="center">
+                <table cellpadding="8" cellspacing="0" border="0">
+                    <tr>
+                        <td><a href="dashboard_admin.html" style="color: #E5E7EB; text-decoration: none; padding: 8px 15px;">Dashboard</a></td>
+                        <td><a href="transacciones_admin.html" style="color: #E5E7EB; text-decoration: none; padding: 8px 15px;">Transacciones</a></td>
+                        <td><a href="reportes_admin.html" style="color: white; text-decoration: none; padding: 8px 15px; background-color: #F97316; border-radius: 3px;">Reportes</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Main Content -->
+    <table width="100%" cellpadding="20" cellspacing="0" border="0">
+        <tr>
+            <td>
+                
+                <!-- Report Types -->
+                <table width="100%" cellpadding="0" cellspacing="15" border="0">
+                    <tr>
+                        <!-- Consolidated Reports -->
+                        <td width="50%" valign="top">
+                            
+                            <table width="100%" cellpadding="15" cellspacing="0" border="0" bgcolor="#FFFFFF" style="border-radius: 5px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                                <tr>
+                                    <td>
+                                        <h3 style="color: #1E3A8A; margin: 0 0 15px 0;">Reportes Consolidados</h3>
+                                        <p style="color: #4B5563; font-size: 14px; margin: 0 0 20px 0;">Resumen general del sistema bancario</p>
+                                        
+                                        <!-- Report Option 1 -->
+                                        <div style="border: 1px solid #E5E7EB; border-radius: 5px; padding: 15px; margin-bottom: 15px;">
+                                            <div style="margin-bottom: 10px;">
+                                                <input type="radio" name="consolidated" id="general" value="general" style="margin-right: 8px;">
+                                                <label for="general" style="font-weight: bold; color: #1E3A8A; font-size: 16px;">Resumen General de Transacciones</label>
+                                            </div>
+                                            <p style="color: #4B5563; font-size: 13px; margin: 5px 0 10px 25px;">Total de transacciones, montos, tipos de operaciones y estadísticas generales del período seleccionado.</p>
+                                        </div>
+
+                                        <!-- Report Option 2 -->
+                                        <div style="border: 1px solid #E5E7EB; border-radius: 5px; padding: 15px; margin-bottom: 15px;">
+                                            <div style="margin-bottom: 10px;">
+                                                <input type="radio" name="consolidated" id="cashflow" value="cashflow" style="margin-right: 8px;">
+                                                <label for="cashflow" style="font-weight: bold; color: #1E3A8A; font-size: 16px;">Flujo de Caja</label>
+                                            </div>
+                                            <p style="color: #4B5563; font-size: 13px; margin: 5px 0 10px 25px;">Ingresos y egresos detallados, balance neto, proyecciones y análisis de tendencias financieras.</p>
+                                        </div>
+
+                                        <!-- Report Option 3 -->
+                                        <div style="border: 1px solid #E5E7EB; border-radius: 5px; padding: 15px; margin-bottom: 15px;">
+                                            <div style="margin-bottom: 10px;">
+                                                <input type="radio" name="consolidated" id="balances" value="balances" style="margin-right: 8px;">
+                                                <label for="balances" style="font-weight: bold; color: #1E3A8A; font-size: 16px;">Saldos Totales</label>
+                                            </div>
+                                            <p style="color: #4B5563; font-size: 13px; margin: 5px 0 10px 25px;">Consolidado de saldos por usuario, totales del sistema, distribución de fondos y estadísticas de cuentas.</p>
+                                        </div>
+
+                                        <!-- Report Option 4 -->
+                                        <div style="border: 1px solid #E5E7EB; border-radius: 5px; padding: 15px; margin-bottom: 20px;">
+                                            <div style="margin-bottom: 10px;">
+                                                <input type="radio" name="consolidated" id="reconciliation" value="reconciliation" style="margin-right: 8px;">
+                                                <label for="reconciliation" style="font-weight: bold; color: #1E3A8A; font-size: 16px;">Reporte de Conciliaciones</label>
+                                            </div>
+                                            <p style="color: #4B5563; font-size: 13px; margin: 5px 0 10px 25px;">Estado de conciliaciones, discrepancias encontradas, transacciones pendientes y estadísticas de integridad.</p>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </td>
+
+                        <!-- Individual Reports -->
+                        <td width="50%" valign="top">
+                            
+                            <table width="100%" cellpadding="15" cellspacing="0" border="0" bgcolor="#FFFFFF" style="border-radius: 5px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                                <tr>
+                                    <td>
+                                        <h3 style="color: #1E3A8A; margin: 0 0 15px 0;">Reportes Individuales</h3>
+                                        <p style="color: #4B5563; font-size: 14px; margin: 0 0 20px 0;">Estado de cuenta y análisis por usuario</p>
+                                        
+                                        <!-- Report Option 5 -->
+                                        <div style="border: 1px solid #E5E7EB; border-radius: 5px; padding: 15px; margin-bottom: 15px;">
+                                            <div style="margin-bottom: 10px;">
+                                                <input type="radio" name="individual" id="user_statement" value="user_statement" style="margin-right: 8px;">
+                                                <label for="user_statement" style="font-weight: bold; color: #1E3A8A; font-size: 16px;">Estado de Cuenta por Usuario</label>
+                                            </div>
+                                            <p style="color: #4B5563; font-size: 13px; margin: 5px 0 10px 25px;">Movimientos detallados, saldos, historial completo y resumen financiero de un usuario específico.</p>
+                                        </div>
+
+                                        <!-- Report Option 6 -->
+                                        <div style="border: 1px solid #E5E7EB; border-radius: 5px; padding: 15px; margin-bottom: 15px;">
+                                            <div style="margin-bottom: 10px;">
+                                                <input type="radio" name="individual" id="movement_analysis" value="movement_analysis" style="margin-right: 8px;">
+                                                <label for="movement_analysis" style="font-weight: bold; color: #1E3A8A; font-size: 16px;">Análisis de Movimientos por Período</label>
+                                            </div>
+                                            <p style="color: #4B5563; font-size: 13px; margin: 5px 0 10px 25px;">Comparativa de períodos, tendencias de gastos/ingresos, patrones de comportamiento financiero por usuario.</p>
+                                        </div>
+
+                                        <!-- Report Option 7 -->
+                                        <div style="border: 1px solid #E5E7EB; border-radius: 5px; padding: 15px; margin-bottom: 15px;">
+                                            <div style="margin-bottom: 10px;">
+                                                <input type="radio" name="individual" id="provider_payments" value="provider_payments" style="margin-right: 8px;">
+                                                <label for="provider_payments" style="font-weight: bold; color: #1E3A8A; font-size: 16px;">Pagos a Proveedores</label>
+                                            </div>
+                                            <p style="color: #4B5563; font-size: 13px; margin: 5px 0 10px 25px;">Detalle de pagos realizados a proveedores, montos, fechas, referencias y estado de las transacciones.</p>
+                                        </div>
+
+                                        <!-- User Selection -->
+                                        <div style="border: 2px solid #F97316; border-radius: 5px; padding: 15px; background-color: #FFF7ED;">
+                                            <label style="color: #1E3A8A; font-size: 14px; font-weight: bold;">Seleccionar Usuario/Proveedor:</label>
+                                            <select style="width: 100%; padding: 8px; border: 1px solid #E5E7EB; border-radius: 3px; margin-top: 8px;">
+                                                <option>Seleccionar...</option>
+                                                <option>Cliente_001 - Ana García</option>
+                                                <option>Cliente_089 - Carlos López</option>
+                                                <option>Cliente_156 - María Rodríguez</option>
+                                                <option>Proveedor_023 - EMPRESA_XYZ_SA</option>
+                                                <option>Proveedor_045 - SERVICIOS_ABC_LTDA</option>
+                                                <option>Todos los usuarios</option>
+                                            </select>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Report Parameters -->
+                <table width="100%" cellpadding="15" cellspacing="0" border="0" bgcolor="#FFFFFF" style="border-radius: 5px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <tr>
+                        <td>
+                            <h3 style="color: #1E3A8A; margin: 0 0 15px 0;">Parámetros del Reporte</h3>
+                            
+                            <table width="100%" cellpadding="5" cellspacing="0" border="0">
+                                <tr>
+                                    <td width="25%">
+                                        <label style="color: #4B5563; font-size: 14px; font-weight: bold;">Período:</label>
+                                        <select style="width: 100%; padding: 8px; border: 1px solid #E5E7EB; border-radius: 3px; margin-top: 5px;">
+                                            <option>Último mes</option>
+                                            <option>Últimos 3 meses</option>
+                                            <option>Últimos 6 meses</option>
+                                            <option>Año actual</option>
+                                            <option>Personalizado</option>
+                                        </select>
+                                    </td>
+                                    <td width="25%" style="padding-left: 10px;">
+                                        <label style="color: #4B5563; font-size: 14px; font-weight: bold;">Fecha Desde:</label>
+                                        <input type="date" style="width: 100%; padding: 8px; border: 1px solid #E5E7EB; border-radius: 3px; margin-top: 5px; box-sizing: border-box;">
+                                    </td>
+                                    <td width="25%" style="padding-left: 10px;">
+                                        <label style="color: #4B5563; font-size: 14px; font-weight: bold;">Fecha Hasta:</label>
+                                        <input type="date" style="width: 100%; padding: 8px; border: 1px solid #E5E7EB; border-radius: 3px; margin-top: 5px; box-sizing: border-box;">
+                                    </td>
+                                    <td width="25%" style="padding-left: 10px;">
+                                        <label style="color: #4B5563; font-size: 14px; font-weight: bold;">Nivel de Detalle:</label>
+                                        <select style="width: 100%; padding: 8px; border: 1px solid #E5E7EB; border-radius: 3px; margin-top: 5px;">
+                                            <option>Resumen</option>
+                                            <option>Detallado</option>
+                                            <option>Completo</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Generate Section -->
+                <table width="100%" cellpadding="15" cellspacing="0" border="0" bgcolor="#FFFFFF" style="border-radius: 5px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <tr>
+                        <td align="center">
+                            <button style="padding: 15px 35px; background-color: #F97316; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 18px; font-weight: bold;">Mostrar Reporte</button>
+
+                            <div style="margin-top: 20px; padding: 15px; background-color: #F0F9FF; border-radius: 5px; border-left: 4px solid #1E3A8A;">
+                                <p style="margin: 0; color: #4B5563; font-size: 14px;">
+                                    <strong>Nota:</strong> Los reportes se mostrarán directamente en pantalla con la información más actualizada del sistema.
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Report Results -->
+                <div id="reportResults" style="display: none;">
+                    <table width="100%" cellpadding="15" cellspacing="0" border="0" bgcolor="#FFFFFF" style="border-radius: 5px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <tr>
+                            <td>
+                                <div style="margin-bottom: 15px;">
+                                    <h3 style="color: #1E3A8A; margin: 0; display: inline-block;" id="reportTitle">Reporte Generado</h3>
+                                    <div style="float: right;">
+                                        <button style="padding: 8px 15px; background-color: #10B981; color: white; border: none; border-radius: 3px; cursor: pointer;">Imprimir</button>
+                                    </div>
+                                    <div style="clear: both;"></div>
+                                </div>
+                                
+                                <!-- Report Summary -->
+                                <div id="reportSummary" style="margin-bottom: 20px; padding: 15px; background-color: #F9FAFB; border-radius: 5px;">
+                                    <table width="100%" cellpadding="5" cellspacing="0" border="0">
+                                        <tr>
+                                            <td width="25%"><strong>Período:</strong> <span id="summaryPeriod">Septiembre 2025</span></td>
+                                            <td width="25%"><strong>Total Transacciones:</strong> <span id="summaryTransactions">1,247</span></td>
+                                            <td width="25%"><strong>Total Ingresos:</strong> <span id="summaryIncome" style="color: #10B981;">$2,450,750</span></td>
+                                            <td width="25%"><strong>Total Egresos:</strong> <span id="summaryExpenses" style="color: #EF4444;">$1,897,250</span></td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                <!-- Report Table -->
+                                <div id="reportTable">
+                                    <table width="100%" cellpadding="8" cellspacing="0" border="0" style="border-collapse: collapse;">
+                                        <tr bgcolor="#E5E7EB">
+                                            <td style="font-weight: bold; color: #4B5563; border-bottom: 1px solid #D1D5DB; padding: 10px;">Fecha</td>
+                                            <td style="font-weight: bold; color: #4B5563; border-bottom: 1px solid #D1D5DB; padding: 10px;">Usuario/Entidad</td>
+                                            <td style="font-weight: bold; color: #4B5563; border-bottom: 1px solid #D1D5DB; padding: 10px;">Descripción</td>
+                                            <td style="font-weight: bold; color: #4B5563; border-bottom: 1px solid #D1D5DB; padding: 10px;">Tipo</td>
+                                            <td style="font-weight: bold; color: #4B5563; border-bottom: 1px solid #D1D5DB; padding: 10px;">Monto</td>
+                                            <td style="font-weight: bold; color: #4B5563; border-bottom: 1px solid #D1D5DB; padding: 10px;">Balance</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">22/09/2025</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">Cliente_001</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">Depósito Empresarial</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;"><span style="background-color: #10B981; color: white; padding: 3px 8px; border-radius: 3px; font-size: 12px;">Abono</span></td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; color: #10B981; font-weight: bold;">+$25,000.00</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; color: #1E3A8A;">$45,750.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">20/09/2025</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">Proveedor_045</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">Pago a Proveedor XYZ</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;"><span style="background-color: #EF4444; color: white; padding: 3px 8px; border-radius: 3px; font-size: 12px;">Cargo</span></td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; color: #EF4444; font-weight: bold;">-$8,500.00</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; color: #1E3A8A;">$20,750.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">18/09/2025</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">Cliente_089</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">Depósito Cliente ABC</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;"><span style="background-color: #10B981; color: white; padding: 3px 8px; border-radius: 3px; font-size: 12px;">Abono</span></td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; color: #10B981; font-weight: bold;">+$15,000.00</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; color: #1E3A8A;">$29,250.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">15/09/2025</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">Proveedor_023</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">Pago Servicios Generales</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;"><span style="background-color: #EF4444; color: white; padding: 3px 8px; border-radius: 3px; font-size: 12px;">Cargo</span></td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; color: #EF4444; font-weight: bold;">-$3,250.00</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; color: #1E3A8A;">$14,250.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">12/09/2025</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">Cliente_156</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">Transferencia Recibida</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;"><span style="background-color: #10B981; color: white; padding: 3px 8px; border-radius: 3px; font-size: 12px;">Abono</span></td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; color: #10B981; font-weight: bold;">+$12,500.00</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; color: #1E3A8A;">$17,500.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">10/09/2025</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">Proveedor_067</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">Pago Factura #F-2025-0445</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;"><span style="background-color: #EF4444; color: white; padding: 3px 8px; border-radius: 3px; font-size: 12px;">Cargo</span></td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; color: #EF4444; font-weight: bold;">-$7,800.00</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; color: #1E3A8A;">$5,000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">08/09/2025</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">Cliente_234</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">Ingreso por Ventas</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;"><span style="background-color: #10B981; color: white; padding: 3px 8px; border-radius: 3px; font-size: 12px;">Abono</span></td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; color: #10B981; font-weight: bold;">+$18,200.00</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; color: #1E3A8A;">$12,800.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">05/09/2025</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">Cliente_001</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">Transferencia Interna</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;"><span style="background-color: #F59E0B; color: white; padding: 3px 8px; border-radius: 3px; font-size: 12px;">Transferencia</span></td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; color: #F59E0B; font-weight: bold;">$5,000.00</td>
+                                            <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; color: #1E3A8A;">-$5,400.00</td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                <!-- Report Footer -->
+                                <div style="margin-top: 20px; padding: 15px; background-color: #F9FAFB; border-radius: 5px; text-align: center;">
+                                    <p style="margin: 0; color: #4B5563; font-size: 14px;">
+                                        <strong>Balance Final:</strong> <span style="color: #10B981; font-size: 16px; font-weight: bold;">$553,500.00</span>
+                                        | <strong>Generado el:</strong> 22/09/2025 a las 14:30
+                                    </p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Recent Reports -->
+                <table width="100%" cellpadding="15" cellspacing="0" border="0" bgcolor="#FFFFFF" style="border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <tr>
+                        <td>
+                            <h3 style="color: #1E3A8A; margin: 0 0 15px 0;">Reportes Consultados Recientemente</h3>
+                            
+                            <table width="100%" cellpadding="8" cellspacing="0" border="0" style="border-collapse: collapse;">
+                                <tr bgcolor="#E5E7EB">
+                                    <td style="font-weight: bold; color: #4B5563; border-bottom: 1px solid #D1D5DB; padding: 10px;">Fecha</td>
+                                    <td style="font-weight: bold; color: #4B5563; border-bottom: 1px solid #D1D5DB; padding: 10px;">Tipo de Reporte</td>
+                                    <td style="font-weight: bold; color: #4B5563; border-bottom: 1px solid #D1D5DB; padding: 10px;">Usuario/Alcance</td>
+                                    <td style="font-weight: bold; color: #4B5563; border-bottom: 1px solid #D1D5DB; padding: 10px;">Período</td>
+                                    <td style="font-weight: bold; color: #4B5563; border-bottom: 1px solid #D1D5DB; padding: 10px;">Registros</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 10px; font-size: 14px;">22/09 14:30</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 10px; font-size: 14px;">Flujo de Caja</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 10px; font-size: 14px;">Sistema Completo</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 10px; font-size: 14px;">Septiembre 2025</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 10px; font-size: 14px;">1,247 transacciones</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 10px; font-size: 14px;">22/09 11:15</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 10px; font-size: 14px;">Estado de Cuenta</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 10px; font-size: 14px;">Cliente_001</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 10px; font-size: 14px;">Último mes</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 10px; font-size: 14px;">89 movimientos</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 10px; font-size: 14px;">21/09 16:45</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 10px; font-size: 14px;">Resumen General</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 10px; font-size: 14px;">Sistema Completo</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 10px; font-size: 14px;">Últimos 3 meses</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 10px; font-size: 14px;">3,892 transacciones</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        
+    </script>
+
+</body>
+</html>

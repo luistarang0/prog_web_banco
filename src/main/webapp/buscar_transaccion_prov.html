@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de Transacciones - Portal de Proveedores - Halcón Capital</title>
+</head>
+<body bgcolor="#F0F9FF" style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
+
+    <!-- Header -->
+    <table width="100%" cellpadding="10" cellspacing="0" border="0" bgcolor="#1E3A8A">
+        <tr>
+            <td>
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td width="200">
+                            <div style="display: inline-block;">
+                                <span style="background-color: #F97316; color: white; padding: 8px 12px; border-radius: 5px; font-weight: bold; margin-right: 10px;">H</span>
+                                <span style="color: white; font-size: 18px; font-weight: bold;">Halcón Capital</span>
+                            </div>
+                        </td>
+                        <td align="center">
+                            <span style="color: white; font-size: 16px; font-weight: bold;">Portal de Proveedores</span>
+                        </td>
+                        <td width="200" align="right">
+                            <span style="color: #E5E7EB; font-size: 14px;">Proveedor: EMPRESA_XYZ_SA</span>
+                            <button 
+                                onclick="window.location.href='index.html'"
+                                style="margin-left: 15px; padding: 5px 10px; background-color: #F97316; color: white; border: none; border-radius: 3px; cursor: pointer;">Salir</button>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Navigation Menu -->
+    <table width="100%" cellpadding="8" cellspacing="0" border="0" bgcolor="#4B5563">
+        <tr>
+            <td align="center">
+                <table cellpadding="8" cellspacing="0" border="0">
+                    <tr>
+                        <td><a href="dashboard_proveedores.html" style="color: #E5E7EB; text-decoration: none; padding: 8px 15px;">Mi cuenta</a></td>
+                        <td><a href="historial_prov.html" style="color: #E5E7EB; text-decoration: none; padding: 8px 15px;">Historial</a></td>
+                        <td><a href="buscar_transaccion_prov.html" style="color: white; text-decoration: none; padding: 8px 15px; background-color: #F97316; border-radius: 3px;">Buscar Transacción</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Main Content -->
+    <table width="100%" cellpadding="20" cellspacing="0" border="0">
+        <tr>
+            <td>
+                
+                <!-- Search Section -->
+                <table width="100%" cellpadding="15" cellspacing="0" border="0" bgcolor="#FFFFFF" style="border-radius: 5px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <tr>
+                        <td>
+                            <h3 style="color: #1E3A8A; margin: 0 0 15px 0;">Buscar Transacción</h3>
+                            <p style="color: #4B5563; font-size: 14px; margin: 0 0 20px 0;">Utiliza el número de transacción que recibiste en tu notificación para verificar el estado de tu pago.</p>
+                            
+                            <table width="100%" cellpadding="5" cellspacing="0" border="0">
+                                <tr>
+                                    <td width="70%">
+                                        <label style="color: #4B5563; font-size: 14px; font-weight: bold;">Número de Transacción:</label>
+                                        <input type="text" placeholder="Ej: TXN202509220045" style="width: 100%; padding: 12px; border: 2px solid #E5E7EB; border-radius: 5px; margin-top: 5px; box-sizing: border-box; font-size: 16px;">
+                                    </td>
+                                    <td width="30%" style="padding-left: 15px; padding-top: 20px;">
+                                        <button style="width: 100%; padding: 14px; background-color: #F97316; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: bold;">Buscar</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Search Result -->
+                <div id="searchResult" style="display: none;">
+                    <table width="100%" cellpadding="15" cellspacing="0" border="0" bgcolor="#FFFFFF" style="border-radius: 5px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <tr>
+                            <td>
+                                <div style="margin-bottom: 15px;">
+                                    <h3 style="color: #1E3A8A; margin: 0; display: inline-block;">Resultado de la Búsqueda</h3>
+                                    <div style="float: right;">
+                                        <span id="transactionStatus" style="background-color: #10B981; color: white; padding: 6px 12px; border-radius: 5px; font-size: 14px; font-weight: bold;">COMPLETADO</span>
+                                    </div>
+                                    <div style="clear: both;"></div>
+                                </div>
+
+                                <!-- Transaction Details -->
+                                <table width="100%" cellpadding="10" cellspacing="0" border="0" style="background-color: #F9FAFB; border-radius: 5px;">
+                                    <tr>
+                                        <td width="50%" style="padding: 15px;">
+                                            <div style="margin-bottom: 10px;">
+                                                <strong style="color: #4B5563;">Número de Transacción:</strong><br>
+                                                <span id="txnNumber" style="color: #1E3A8A; font-size: 18px; font-weight: bold;">TXN202509220045</span>
+                                            </div>
+                                            <div style="margin-bottom: 10px;">
+                                                <strong style="color: #4B5563;">Fecha de Pago:</strong><br>
+                                                <span id="txnDate" style="color: #1E3A8A;">22/09/2025 - 10:15 AM</span>
+                                            </div>
+                                            <div style="margin-bottom: 10px;">
+                                                <strong style="color: #4B5563;">Concepto:</strong><br>
+                                                <span id="txnConcept" style="color: #1E3A8A;">Pago Factura #F-2025-0892</span>
+                                            </div>
+                                        </td>
+                                        <td width="50%" style="padding: 15px; border-left: 1px solid #E5E7EB;">
+                                            <div style="margin-bottom: 10px;">
+                                                <strong style="color: #4B5563;">Monto Pagado:</strong><br>
+                                                <span id="txnAmount" style="color: #10B981; font-size: 24px; font-weight: bold;">$8,500.00</span>
+                                            </div>
+                                            <div style="margin-bottom: 10px;">
+                                                <strong style="color: #4B5563;">Proveedor:</strong><br>
+                                                <span id="txnProvider" style="color: #1E3A8A;">EMPRESA_XYZ_SA</span>
+                                            </div>
+                                            <div style="margin-bottom: 10px;">
+                                                <strong style="color: #4B5563;">Estado:</strong><br>
+                                                <span id="txnStatusDetail" style="color: #10B981; font-weight: bold;">✓ Pago completado y verificado</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <!-- Payment Timeline -->
+                                <div style="margin-top: 20px;">
+                                    <h4 style="color: #1E3A8A; margin: 0 0 15px 0;">Seguimiento del Pago</h4>
+                                    
+                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                        <tr>
+                                            <td width="20" valign="top">
+                                                <div style="width: 16px; height: 16px; background-color: #10B981; border-radius: 50%; margin-top: 3px;"></div>
+                                            </td>
+                                            <td style="padding-left: 15px; padding-bottom: 15px; border-left: 2px solid #10B981; margin-left: 8px;">
+                                                <div style="font-weight: bold; color: #10B981;">Pago Completado</div>
+                                                <div style="color: #6B7280; font-size: 13px;">22/09/2025 - 10:15 AM</div>
+                                                <div style="color: #4B5563; font-size: 14px;">El pago ha sido procesado exitosamente.</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="20" valign="top">
+                                                <div style="width: 16px; height: 16px; background-color: #10B981; border-radius: 50%; margin-top: 3px;"></div>
+                                            </td>
+                                            <td style="padding-left: 15px; padding-bottom: 15px; border-left: 2px solid #10B981; margin-left: 8px;">
+                                                <div style="font-weight: bold; color: #10B981;">Pago Registrado</div>
+                                                <div style="color: #6B7280; font-size: 13px;">22/09/2025 - 10:14 AM</div>
+                                                <div style="color: #4B5563; font-size: 14px;">La transacción fue registrada en el sistema.</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="20" valign="top">
+                                                <div style="width: 16px; height: 16px; background-color: #10B981; border-radius: 50%; margin-top: 3px;"></div>
+                                            </td>
+                                            <td style="padding-left: 15px; padding-bottom: 15px; border-left: 2px solid #E5E7EB; margin-left: 8px;">
+                                                <div style="font-weight: bold; color: #10B981;">Notificación Enviada</div>
+                                                <div style="color: #6B7280; font-size: 13px;">22/09/2025 - 10:16 AM</div>
+                                                <div style="color: #4B5563; font-size: 14px;">Se envió confirmación al proveedor.</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="20" valign="top">
+                                                <div style="width: 16px; height: 16px; background-color: #10B981; border-radius: 50%; margin-top: 3px;"></div>
+                                            </td>
+                                            <td style="padding-left: 15px;">
+                                                <div style="font-weight: bold; color: #10B981;">Verificado</div>
+                                                <div style="color: #6B7280; font-size: 13px;">22/09/2025 - 10:20 AM</div>
+                                                <div style="color: #4B5563; font-size: 14px;">Transacción verificada y conciliada.</div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Quick Help -->
+                <table width="100%" cellpadding="15" cellspacing="0" border="0" bgcolor="#FFFFFF" style="border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <tr>
+                        <td>
+                            <h3 style="color: #1E3A8A; margin: 0 0 15px 0;">Ayuda y Soporte</h3>
+                            
+                            <table width="100%" cellpadding="10" cellspacing="10" border="0">
+                                <tr>
+                                    <td width="50%" bgcolor="#F0F9FF" style="border-radius: 5px; padding: 15px;">
+                                        <h4 style="color: #1E3A8A; margin: 0 0 10px 0;">¿Dónde encuentro mi número de transacción?</h4>
+                                        <p style="color: #4B5563; font-size: 14px; margin: 0;">
+                                            El número de transacción (TXN) se envía automáticamente en la notificación que recibes cuando se procesa un pago a tu favor. 
+                                            También puedes encontrarlo en tu historial de pagos.
+                                        </p>
+                                    </td>
+                                    <td width="50%" bgcolor="#F0FDF4" style="border-radius: 5px; padding: 15px;">
+                                        <h4 style="color: #10B981; margin: 0 0 10px 0;">Estados de Transacción</h4>
+                                        <p style="color: #4B5563; font-size: 14px; margin: 0 0 8px 0;">
+                                            <span style="background-color: #10B981; color: white; padding: 2px 6px; border-radius: 3px; font-size: 12px;">COMPLETADO</span> - Pago procesado exitosamente<br>
+                                        </p>
+                                        <p style="color: #4B5563; font-size: 14px; margin: 0;">
+                                            <span style="background-color: #F59E0B; color: white; padding: 2px 6px; border-radius: 3px; font-size: 12px;">PENDIENTE</span> - En proceso de verificación
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <div style="margin-top: 15px; padding: 15px; background-color: #FFFBEB; border-radius: 5px; border-left: 4px solid #F59E0B;">
+                                <p style="margin: 0; color: #4B5563; font-size: 14px;">
+                                    <strong>¿No encuentras tu transacción?</strong> Si tu número de transacción no aparece en el sistema, 
+                                    por favor verifica que esté escrito correctamente. Si el problema persiste, contacta a nuestro equipo de soporte.
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        
+    </script>
+
+</body>
+</html>

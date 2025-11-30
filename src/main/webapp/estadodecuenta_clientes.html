@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estado de Cuenta - Halcón Capital</title>
+</head>
+<body bgcolor="#F0F9FF" style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
+
+    <!-- Header -->
+    <table width="100%" cellpadding="10" cellspacing="0" border="0" bgcolor="#1E3A8A">
+        <tr>
+            <td>
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td width="200">
+                            <div style="display: inline-block;">
+                                <span style="background-color: #F97316; color: white; padding: 8px 12px; border-radius: 5px; font-weight: bold; margin-right: 10px;">H</span>
+                                <span style="color: white; font-size: 18px; font-weight: bold;">Halcón Capital</span>
+                            </div>
+                        </td>
+                        <td align="center">
+                            <span style="color: white; font-size: 16px; font-weight: bold;">Portal de Clientes</span>
+                        </td>
+                        <td width="200" align="right">
+                            <span style="color: #E5E7EB; font-size: 14px;">Cliente: Ana García</span>
+                            <button 
+                                onclick="window.location.href='index.html'" 
+                                style="margin-left: 15px; padding: 5px 10px; background-color: #F97316; color: white; border: none; border-radius: 3px; cursor: pointer;">Salir</button>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Navigation Menu -->
+    <table width="100%" cellpadding="8" cellspacing="0" border="0" bgcolor="#4B5563">
+        <tr>
+            <td align="center">
+                <table cellpadding="8" cellspacing="0" border="0">
+                    <tr>
+                        <td><a href="dashboard_clientes.html" style="color: #E5E7EB; text-decoration: none; padding: 8px 15px;">Mi Cuenta</a></td>
+                        <td><a href="movimientos_clientes.html" style="color: #E5E7EB; text-decoration: none; padding: 8px 15px;">Movimientos</a></td>
+                        <td><a href="estadodecuenta_clientes.html" style="color: white; text-decoration: none; padding: 8px 15px; background-color: #F97316; border-radius: 3px;">Estado de Cuenta</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Main Content -->
+    <table width="100%" cellpadding="20" cellspacing="0" border="0">
+        <tr>
+            <td>
+                
+                <!-- Account Info -->
+                <table width="100%" cellpadding="15" cellspacing="0" border="0" bgcolor="#FFFFFF" style="border-radius: 5px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <tr>
+                        <td>
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <td width="50%">
+                                        <h3 style="color: #1E3A8A; margin: 0 0 15px 0;">Información de la Cuenta</h3>
+                                        <div style="margin-bottom: 8px;"><strong>Cliente:</strong> Ana García Rodríguez</div>
+                                        <div style="margin-bottom: 8px;"><strong>Cuenta:</strong> **** **** **** 1234</div>
+                                        <div style="margin-bottom: 8px;"><strong>Tipo:</strong> Empresarial</div>
+                                    </td>
+                                    <td width="50%" align="right">
+                                        <div style="margin-bottom: 8px;"><strong>Período:</strong> 01/09/2025 - 30/09/2025</div>
+                                        <div style="margin-bottom: 8px;"><strong>Fecha:</strong> 22/09/2025</div>
+           
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Summary -->
+                <table width="100%" cellpadding="10" cellspacing="10" border="0" style="margin-bottom: 20px;">
+                    <tr>
+                        <td width="25%" bgcolor="#FFFFFF" style="border-radius: 5px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                            <div style="text-align: center;">
+                                <div style="font-size: 20px; font-weight: bold; color: #1E3A8A;">$20,750</div>
+                                <div style="color: #4B5563; font-size: 14px; margin-top: 5px;">Saldo Inicial</div>
+                            </div>
+                        </td>
+                        <td width="25%" bgcolor="#FFFFFF" style="border-radius: 5px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                            <div style="text-align: center;">
+                                <div style="font-size: 20px; font-weight: bold; color: #10B981;">$152,500</div>
+                                <div style="color: #4B5563; font-size: 14px; margin-top: 5px;">Total Ingresos</div>
+                            </div>
+                        </td>
+                        <td width="25%" bgcolor="#FFFFFF" style="border-radius: 5px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                            <div style="text-align: center;">
+                                <div style="font-size: 20px; font-weight: bold; color: #EF4444;">$127,500</div>
+                                <div style="color: #4B5563; font-size: 14px; margin-top: 5px;">Total Egresos</div>
+                            </div>
+                        </td>
+                        <td width="25%" bgcolor="#FFFFFF" style="border-radius: 5px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                            <div style="text-align: center;">
+                                <div style="font-size: 20px; font-weight: bold; color: #1E3A8A;">$45,750</div>
+                                <div style="color: #4B5563; font-size: 14px; margin-top: 5px;">Saldo Final</div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Transactions Table -->
+                <table width="100%" cellpadding="15" cellspacing="0" border="0" bgcolor="#FFFFFF" style="border-radius: 5px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <tr>
+                        <td>
+                            <h3 style="color: #1E3A8A; margin: 0 0 15px 0;">Detalle de Movimientos</h3>
+                            
+                            <table width="100%" cellpadding="8" cellspacing="0" border="0" style="border-collapse: collapse;">
+                                <tr bgcolor="#E5E7EB">
+                                    <td style="font-weight: bold; color: #4B5563; border-bottom: 1px solid #D1D5DB; padding: 10px;">Fecha</td>
+                                    <td style="font-weight: bold; color: #4B5563; border-bottom: 1px solid #D1D5DB; padding: 10px;">Descripción</td>
+                                    <td style="font-weight: bold; color: #4B5563; border-bottom: 1px solid #D1D5DB; padding: 10px;">Referencia</td>
+                                    <td style="font-weight: bold; color: #4B5563; border-bottom: 1px solid #D1D5DB; padding: 10px;">Cargos</td>
+                                    <td style="font-weight: bold; color: #4B5563; border-bottom: 1px solid #D1D5DB; padding: 10px;">Abonos</td>
+                                    <td style="font-weight: bold; color: #4B5563; border-bottom: 1px solid #D1D5DB; padding: 10px;">Saldo</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">01/09</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">Saldo Inicial</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 12px; color: #6B7280;">-</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">-</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">-</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; font-weight: bold;">$20,750.00</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">03/09</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">Depósito Inicial Empresa</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 12px; color: #6B7280;">TXN202509030001</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">-</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; color: #10B981; font-weight: bold;">$50,000.00</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; font-weight: bold;">$70,750.00</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">05/09</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">Pago a Proveedor XYZ</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 12px; color: #6B7280;">TXN202509050089</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; color: #EF4444; font-weight: bold;">$15,000.00</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">-</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; font-weight: bold;">$55,750.00</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">08/09</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">Ingreso por Ventas</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 12px; color: #6B7280;">TXN202509080112</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">-</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; color: #10B981; font-weight: bold;">$32,500.00</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; font-weight: bold;">$88,250.00</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">10/09</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">Pago Servicios Generales</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 12px; color: #6B7280;">TXN202509100178</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; color: #EF4444; font-weight: bold;">$7,800.00</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">-</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; font-weight: bold;">$80,450.00</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">12/09</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">Transferencia Recibida</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 12px; color: #6B7280;">TXN202509120034</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">-</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; color: #10B981; font-weight: bold;">$25,000.00</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; font-weight: bold;">$105,450.00</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">15/09</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">Pago Nómina</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 12px; color: #6B7280;">TXN202509150067</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; color: #EF4444; font-weight: bold;">$35,000.00</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">-</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; font-weight: bold;">$70,450.00</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">18/09</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">Depósito Cliente DEF</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 12px; color: #6B7280;">TXN202509180123</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">-</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; color: #10B981; font-weight: bold;">$45,000.00</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; font-weight: bold;">$115,450.00</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">20/09</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">Pago Proveedor ABC</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 12px; color: #6B7280;">TXN202509200045</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; color: #EF4444; font-weight: bold;">$69,700.00</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px;">-</td>
+                                    <td style="border-bottom: 1px solid #E5E7EB; padding: 8px; font-size: 14px; font-weight: bold;">$45,750.00</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Additional Info Row -->
+                <table width="100%" cellpadding="0" cellspacing="10" border="0">
+                    <tr>                   
+
+                        <!-- Statistics -->
+                        <td width="50%" valign="top">
+                            <table width="100%" cellpadding="15" cellspacing="0" border="0" bgcolor="#FFFFFF" style="border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                                <tr>
+                                    <td>
+                                        <h3 style="color: #1E3A8A; margin: 0 0 15px 0;">Estadísticas</h3>
+                                        
+                                        <table width="100%" cellpadding="5" cellspacing="0" border="0">
+                                            <tr>
+                                                <td style="font-size: 14px; color: #4B5563;">Total Transacciones:</td>
+                                                <td align="right" style="font-size: 14px; color: #1E3A8A; font-weight: bold;">9</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="font-size: 14px; color: #4B5563;">Depósitos:</td>
+                                                <td align="right" style="font-size: 14px; color: #10B981; font-weight: bold;">4</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="font-size: 14px; color: #4B5563;">Pagos:</td>
+                                                <td align="right" style="font-size: 14px; color: #EF4444; font-weight: bold;">4</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="font-size: 14px; color: #4B5563;">Promedio por transacción:</td>
+                                                <td align="right" style="font-size: 14px; color: #1E3A8A; font-weight: bold;">$31,111</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+
+    <script>
+       
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Administrativo - Halcón Capital</title>
+</head>
+<body bgcolor="#F0F9FF" style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
+
+    <!-- Header -->
+    <table width="100%" cellpadding="10" cellspacing="0" border="0" bgcolor="#1E3A8A">
+        <tr>
+            <td>
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td width="200">
+                            <div style="display: inline-block;">
+                                <span style="background-color: #F97316; color: white; padding: 8px 12px; border-radius: 5px; font-weight: bold; margin-right: 10px;">H</span>
+                                <span style="color: white; font-size: 18px; font-weight: bold;">Halcón Capital</span>
+                            </div>
+                        </td>
+                        <td align="center">
+                            <span style="color: white; font-size: 16px; font-weight: bold;">Panel Administrativo</span>
+                        </td>
+                        <td width="200" align="right">
+                            <span style="color: #E5E7EB; font-size: 14px;">Administrador: Juan Pérez</span>
+                            <button
+                                onclick="window.location.href='index.html'"
+                                style="margin-left: 15px; padding: 5px 10px; background-color: #F97316; color: white; border: none; border-radius: 3px; cursor: pointer;">Salir</button>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Navigation Menu -->
+    <table width="100%" cellpadding="8" cellspacing="0" border="0" bgcolor="#4B5563">
+        <tr>
+            <td align="center">
+                <table cellpadding="8" cellspacing="0" border="0">
+                    <tr>
+                        <td><a href="dashboard_admin.html" style="color: white; text-decoration: none; padding: 8px 15px; background-color: #F97316; border-radius: 3px;">Dashboard</a></td>
+                        <td><a href="transacciones_admin.html" style="color: #E5E7EB; text-decoration: none; padding: 8px 15px;">Transacciones</a></td>
+                        <td><a href="reportes_admin.html" style="color: #E5E7EB; text-decoration: none; padding: 8px 15px;">Reportes</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Main Content -->
+    <table width="100%" cellpadding="20" cellspacing="0" border="0">
+        <tr>
+            <td>
+                
+                <!-- KPIs Row -->
+                <table width="100%" cellpadding="10" cellspacing="10" border="0">
+                    <tr>
+                        <td width="33%" bgcolor="#FFFFFF" style="border-radius: 5px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                            <div style="text-align: center;">
+                                <div style="font-size: 24px; font-weight: bold; color: #1E3A8A;">1,247</div>
+                                <div style="color: #4B5563; font-size: 14px; margin-top: 5px;">Transacciones Hoy</div>
+                            </div>
+                        </td>
+                        <td width="33%" bgcolor="#FFFFFF" style="border-radius: 5px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                            <div style="text-align: center;">
+                                <div style="font-size: 24px; font-weight: bold; color: #1E3A8A;">342</div>
+                                <div style="color: #4B5563; font-size: 14px; margin-top: 5px;">Usuarios Activos</div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <br>
+
+                <!-- Content Row -->
+                <table width="100%" cellpadding="0" cellspacing="10" border="0">
+                    <tr>
+                        <!-- Left Column -->
+                        <td width="60%" valign="top">
+                            
+                            <!-- Recent Transactions -->
+                            <table width="100%" cellpadding="15" cellspacing="0" border="0" bgcolor="#FFFFFF" style="border-radius: 5px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                                <tr>
+                                    <td>
+                                        <h3 style="color: #1E3A8A; margin: 0 0 15px 0;">Transacciones Recientes</h3>
+                                        
+                                        <table width="100%" cellpadding="8" cellspacing="0" border="0" style="border-collapse: collapse;">
+                                            <tr bgcolor="#E5E7EB">
+                                                <td style="font-weight: bold; color: #4B5563; border-bottom: 1px solid #D1D5DB;">Fecha</td>
+                                                <td style="font-weight: bold; color: #4B5563; border-bottom: 1px solid #D1D5DB;">Usuario</td>
+                                                <td style="font-weight: bold; color: #4B5563; border-bottom: 1px solid #D1D5DB;">Tipo</td>
+                                                <td style="font-weight: bold; color: #4B5563; border-bottom: 1px solid #D1D5DB;">Monto</td>
+                                                <td style="font-weight: bold; color: #4B5563; border-bottom: 1px solid #D1D5DB;">Estado</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;">22/09 10:30</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;">Cliente_001</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;">Abono</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px; color: #10B981;">+$15,000</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;"><span style="background-color: #10B981; color: white; padding: 3px 8px; border-radius: 3px; font-size: 12px;">Completado</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;">22/09 10:15</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;">Proveedor_045</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;">Cargo</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px; color: #EF4444;">-$8,500</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;"><span style="background-color: #10B981; color: white; padding: 3px 8px; border-radius: 3px; font-size: 12px;">Completado</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;">22/09 09:45</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;">Cliente_089</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;">Abono</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px; color: #10B981;">+$25,000</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;"><span style="background-color: #F59E0B; color: white; padding: 3px 8px; border-radius: 3px; font-size: 12px;">Pendiente</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;">22/09 09:30</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;">Proveedor_023</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;">Cargo</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px; color: #EF4444;">-$12,750</td>
+                                                <td style="border-bottom: 1px solid #E5E7EB; font-size: 14px;"><span style="background-color: #10B981; color: white; padding: 3px 8px; border-radius: 3px; font-size: 12px;">Completado</span></td>
+                                            </tr>
+                                        </table>
+                                        
+                                        <div style="margin-top: 10px; text-align: right;">
+                                            <a href="transacciones_admin.html" style="color: #F97316; text-decoration: none; font-size: 14px;">Ver todas las transacciones →</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>                            
+
+                        </td>
+
+                        <!-- Right Column -->
+                        <td width="40%" valign="top">                            
+                            
+
+                            <!-- Recent Activity -->
+                            <table width="100%" cellpadding="15" cellspacing="0" border="0" bgcolor="#FFFFFF" style="border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                                <tr>
+                                    <td>
+                                        <h3 style="color: #1E3A8A; margin: 0 0 15px 0;">Actividad Reciente</h3>
+                                        
+                                        <div style="font-size: 13px; color: #4B5563; margin-bottom: 8px;">
+                                            <strong>10:45</strong> - Conciliación automática completada (247 transacciones)
+                                        </div>
+                                        <div style="font-size: 13px; color: #4B5563; margin-bottom: 8px;">
+                                            <strong>10:30</strong> - Nuevo usuario registrado: Cliente_156
+                                        </div>
+                                        <div style="font-size: 13px; color: #4B5563; margin-bottom: 8px;">
+                                            <strong>10:15</strong> - Reporte mensual generado por Auditor_02
+                                        </div>
+                                        <div style="font-size: 13px; color: #4B5563; margin-bottom: 8px;">
+                                            <strong>09:50</strong> - Backup automático completado
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        
+    </script>
+
+</body>
+</html>
