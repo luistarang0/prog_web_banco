@@ -1,3 +1,5 @@
+<%@page import="com.mycompany.modulo_banco.model.Usuario"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -24,7 +26,7 @@
                 <td style="padding: 30px;">
                     <h2 style="color: #1E3A8A; margin: 0 0 20px 0; font-size: 20px; text-align: center;">Iniciar Sesión</h2>
 
-                    <form>
+                    <form action="<%= request.getContextPath() %>/auth" method="post">
                         <table width="100%" cellpadding="5" cellspacing="0" border="0">
                             <tr>
                                 <td>
@@ -64,6 +66,12 @@
                             </tr>
                         </table>
                     </form>
+                        
+                        <% if (request.getAttribute("error") != null) { %>
+                        <p style="color: #EF4444; text-align: center; margin-top: 15px; font-weight: bold;">
+                            <%= request.getAttribute("error") %>
+                        </p>
+                    <% } %>
                 </td>
             </tr>                   
 
