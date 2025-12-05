@@ -1,41 +1,49 @@
-
 package com.mycompany.modulo_banco.model;
 
 import java.time.LocalDateTime;
+import com.mycompany.modulo_banco.model.TipoUsuario;
+import com.mycompany.modulo_banco.model.EstadoUsuario;
 
 public class Usuario {
-    
+
     private int id;
-    private String numeroCuenta;
     private String nombre;
-    private String username;
     private String email;
     private String password;
     private String telefono;
+    private TipoUsuario tipo;
+    private EstadoUsuario estado;
     private LocalDateTime fechaRegistro;
-            
+
     public Usuario() {
-        
+
     }
-    
+
     public Usuario(String numeroCuenta, String nombre, String username, String email,
             String password, String telefono) {
-        this.numeroCuenta = numeroCuenta;
         this.nombre = nombre;
-        this.username = username;
         this.email = email;
         this.password = password;
         this.telefono = telefono;
     }
-    
-    public Usuario(int id, String numeroCuenta, String nombre, String username, String email, 
-                   String telefono, LocalDateTime fechaRegistro) {
+
+    public Usuario(int id, String numeroCuenta, String nombre, String username, String email,
+            String telefono, LocalDateTime fechaRegistro) {
         this.id = id;
-        this.numeroCuenta = numeroCuenta;
         this.nombre = nombre;
-        this.username = username;
         this.email = email;
         this.telefono = telefono;
+        this.fechaRegistro = fechaRegistro;
+    }
+
+    public Usuario(int id, String numeroCuenta, String nombre, String email, String password, String telefono, TipoUsuario tipo, EstadoUsuario estado, LocalDateTime fechaRegistro) {
+        this.id = id;
+        this.nombre = nombre;
+        this.email = email;
+        this.password = password;
+        this.telefono = telefono;
+        this.tipo = tipo;
+        this.estado = estado;
         this.fechaRegistro = fechaRegistro;
     }
 
@@ -45,14 +53,6 @@ public class Usuario {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getNumeroCuenta() {
-        return numeroCuenta;
-    }
-
-    public void setNumeroCuenta(String numeroCuenta) {
-        this.numeroCuenta = numeroCuenta;
     }
 
     public String getNombre() {
@@ -93,13 +93,22 @@ public class Usuario {
 
     public void setFechaRegistro(LocalDateTime fechaRegistro) {
         this.fechaRegistro = fechaRegistro;
-    }  
-
-    public String getUsername() {
-        return username;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }        
+    public TipoUsuario getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(TipoUsuario tipo) {
+        this.tipo = tipo;
+    }
+
+    public EstadoUsuario getEstado() {
+        return estado;
+    }
+
+    public void setEstado(EstadoUsuario estado) {
+        this.estado = estado;
+    }
+
 }

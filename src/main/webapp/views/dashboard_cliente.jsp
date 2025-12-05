@@ -1,6 +1,8 @@
 
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -26,9 +28,9 @@
                             <span style="color: white; font-size: 16px; font-weight: bold;">Portal de Clientes</span>
                         </td>
                         <td width="200" align="right">
-                            <span style="color: #E5E7EB; font-size: 14px;">Cliente: Ana García</span>
+                            <span style="color: #E5E7EB; font-size: 14px;">Cliente: ${sessionScope.nombreUsuario}</span>
                             <button 
-                                onclick="window.location.href='index.html'" 
+                                onclick="window.location.href='<%= request.getContextPath()%>/views/login.jsp'"
                                 style="margin-left: 15px; padding: 5px 10px; background-color: #F97316; color: white; border: none; border-radius: 3px; cursor: pointer;">Salir</button>
                         </td>
                     </tr>
@@ -66,14 +68,14 @@
                             <table width="100%" cellpadding="10" cellspacing="10" border="0">
                                 <tr>
                                     <td width="50%" bgcolor="#F0F9FF" style="border-radius: 5px; padding: 20px; text-align: center;">
-                                        <div style="font-size: 28px; font-weight: bold; color: #1E3A8A; margin-bottom: 5px;">$45,750.00</div>
+                                        <div style="font-size: 28px; font-weight: bold; color: #1E3A8A; margin-bottom: 5px;">$<fmt:formatNumber value="${sessionScope.cuentaCliente.saldo}" type="number" minFractionDigits="2" maxFractionDigits="2"/></div>
                                         <div style="color: #4B5563; font-size: 16px;">Saldo Disponible</div>
                                     </td>
                                     <td width="50%" style="padding-left: 20px;">
                                         <table width="100%" cellpadding="8" cellspacing="0" border="0">
                                             <tr>
                                                 <td style="color: #4B5563; font-size: 14px;">Cuenta Principal:</td>
-                                                <td style="color: #1E3A8A; font-weight: bold; font-size: 18px;">**** **** **** 1234</td>
+                                                <td style="color: #1E3A8A; font-weight: bold; font-size: 18px;">**** **** **** ${sessionScope.cuentaCliente.ultimosCuatroDigitos}</td>
                                             </tr>
                                             <tr>
                                                 <td style="color: #4B5563; font-size: 14px;">Último Movimiento:</td>

@@ -1,6 +1,8 @@
 
 package com.mycompany.modulo_banco.controller;
 
+import com.mycompany.modulo_banco.model.Cuenta;
+import com.mycompany.modulo_banco.model.CuentaDAO;
 import com.mycompany.modulo_banco.model.Usuario;
 import com.mycompany.modulo_banco.model.UsuarioDAO;
 import jakarta.servlet.ServletException;
@@ -14,10 +16,12 @@ import java.io.IOException;
 @WebServlet("/auth")
 public class AuthServlet extends HttpServlet{
     private UsuarioDAO usuarioDAO;
+    private CuentaDAO cuentaDAO;
     
     @Override
     public void init() {
         usuarioDAO = new UsuarioDAO();
+        cuentaDAO = new CuentaDAO();
     }
     
     @Override
@@ -30,13 +34,20 @@ public class AuthServlet extends HttpServlet{
         Usuario usuario = usuarioDAO.validarLogin(username, password);
         
         if (usuario != null) {
-            HttpSession session = request.getSession();
+            
+            Cuenta cuenta = cuentaDAO.obtenerCuentaPorUsuarioId(usuario.getId());
+            
+         if (cuenta != null){
+             HttpSession session = request.getSession();
             
             session.setAttribute("usuarioLogueado", usuario);
             session.setAttribute("usuarioID", usuario.getId());
             session.setAttribute("nombreUsuario", usuario.getNombre());
+            session.setAttribute("cuentaCliente", cuenta);
             
-            response.sendRedirect(request.getContextPath() + "/views/dashboard.jsp");
+            response.sendRedirect(request.getContextPath() + "/views/dashboard_cliente.jsp");
+         }
+            
         } else {
             request.setAttribute("error", "Numero de cuenta o contraseña incorrectos");
             
